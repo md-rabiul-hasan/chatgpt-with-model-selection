@@ -2,10 +2,13 @@ import express from 'express'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from "openai";
 import bodyParser from 'body-parser'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 const configuration = new Configuration({
     organization: "org-BkBV1Ulgpvlap1DCOeBu5ZbC",
-    apiKey: "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",
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 // 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
